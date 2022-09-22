@@ -13,7 +13,7 @@ if (tree == NULL)
 	return (0);
 if (tree->left || tree->right)
 {
-count = binary_tree_nodes(tree->left) + 1 + binary_tree_nodes(tree->right)
+count = binary_tree_nodes(tree->left) + 1 + binary_tree_nodes(tree->right);
 }
 return (count);
 }
