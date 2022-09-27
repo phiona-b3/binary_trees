@@ -13,18 +13,15 @@ size_t level_left = 0;
 
 if (tree == NULL)
 	return (0);
-if (tree->left)
-{
-level_left = binary_tree_height(tree->left);
-level_left += 1;
+if (tree->left || tree->right)
+	{
+		level_left = binary_tree_height(tree->left);
+		level_right = binary_tree_height(tree->right);
+                return (level_right > level_left ? level_right : level_left);
 }
-if (tree->right)
-{
-level_right = binary_tree_height(tree->right);
-level_right += 1;
+	return (0);
 }
-return (level_right > level_left ? level_right : level_left);
-}
+
 
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
